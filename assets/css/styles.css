@@ -1,0 +1,169 @@
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Thin.ttf);
+    font-weight: 100			;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Light.ttf);
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Bold.ttf);
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Black.ttf);
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(../fonts/OpenSans-Light.ttf);
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(../fonts/OpenSans-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(../fonts/OpenSans-Semibold.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(../fonts/OpenSans-Bold.ttf);
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(../fonts/OpenSans-ExtraBold.ttf);
+    font-weight: 900;
+}
+
+
+body {
+	margin: 0px;
+	padding : 0px;
+	font-family: 'OpenSans' !important;
+}
+
+.block {
+	width : 100%;
+	position: relative;
+	float: left;
+}
+
+.start {
+	height: 685px;
+}
+
+.main-img {
+	position: absolute;
+	width: 100%;
+}
+
+.slider {
+	height: 1000px;
+}
+
+.features {
+	height: 700px;
+	background-color: #eee;
+}
+
+.footer {
+	height: 200px;
+	border-top: 3px solid #aaa;
+	background-color: #202020;
+}
+
+.header {
+	position: fixed;
+	width: 100%;
+	height: 80px;
+	border-bottom: 1px solid white;
+	z-index: 1000;
+}
+
+.logo {
+	position: absolute;
+	top: 8px;
+	left: 60px;
+	width: 130px;
+}
+
+.nav-buttons {
+	width: auto;
+	float : right;
+	padding-top: 13px;
+	margin-right: 50px;
+}
+
+.button {
+	width: auto;
+	position: relative;
+	float: left;
+	color: white;
+	font-size: 15px;
+	padding: 5px 15px;
+	cursor: pointer;
+	margin: 10px;
+}
+
+.makeup {
+	transition: all 0.5s;
+	border-radius: 4px;
+	border: 1px solid white;
+}
+
+.makeup:hover {
+	border-radius: 4px;
+	border: 1px solid white;
+	background: white;
+	color: black;
+}
+
+.head-text {
+	margin-top: 150px;
+	height: 100px;
+	width: 100%;
+	padding: 0% 15%;
+	position: absolute;
+	text-align: center;
+	color: white;
+	font-weight: 500;
+	font-size: 50px; 
+	text-shadow: 1px 1px black;
+}
+
+.search-box-wrapper {
+	margin-top: 300px;
+	height: 100px;
+	background-color: blue;
+	width: 100%;
+	position: absolute;
+}
