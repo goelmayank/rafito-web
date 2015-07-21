@@ -1,4 +1,5 @@
 
+/*----------------------------- GENERAL --------------------------------*/
 
 @font-face {
     font-family: OpenSans;
@@ -44,6 +45,11 @@ body {
 	float: left;
 }
 
+
+
+
+/*----------------------------- START --------------------------------*/
+
 .start {
 	height: 685px;
 }
@@ -51,32 +57,6 @@ body {
 .main-img {
 	position: absolute;
 	width: 100%;
-}
-
-.slider {
-	height: auto;
-	background-color: #fafafa;
-	padding-bottom: 80px;
-}
-
-.features {
-	height: auto;
-	background-color: #eceabf;
-	padding-bottom: 120px;
-	padding-top: 0px;
-}
-
-.footer {
-	height: auto;
-	background-color: #202020;
-	padding: 20px 0px;
-}
-
-.copyright {
-	height: auto;
-	background-color: #111;
-	color: 	#555;
-	font-size: 15px;
 }
 
 .header {
@@ -126,24 +106,395 @@ body {
 }
 
 .head-text {
-	margin-top: 150px;
+	margin-top: 180px;
 	height: 100px;
 	width: 100%;
 	padding: 0% 15%;
 	position: absolute;
 	text-align: center;
 	color: white;
-	font-weight: 500;
+	font-weight: 800;
 	font-size: 50px; 
 	text-shadow: 1px 1px black;
 }
 
 .search-box-wrapper {
-	margin-top: 300px;
+	margin-top: 380px;
 	height: 100px;
-	background-color: blue;
 	width: 100%;
 	position: absolute;
+}
+
+.or-wrapper {
+	margin-top: 480px;
+	height: 100px;
+	width: 100%;
+	position: absolute;
+	text-align: center;
+	color: white;
+	text-shadow: 1px 1px black;
+}
+
+.or {
+	color: white;
+	font-weight: 900;
+	text-shadow: 1px 1px black;
+	font-size: 25px;
+}
+
+.search-bar-wrapper {
+	height: 45px;
+	background-color: rgba(255,255,255,0.8);
+	border-radius: 6px;
+	color: #444;
+}
+
+.search-bar-wrapper>input {
+	height: 45px;
+	background-color: transparent;
+	outline: none;
+	font-size: 20px;
+	border: 0px;
+	color: #000;
+	line-height: 25px;
+	padding-left: 10px;
+	font-weight: 200;
+	width: calc(100% - 200px);
+}
+
+.search-icon {
+	font-size: 25px !important;
+	padding: 10px 20px;
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+	background-color: rgba(40,40,40,0.1);
+	border-right: 1px solid #777;
+}
+
+.input-search {
+	float: right;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+	height: 45px;
+	border: 0px;
+	width: 120px;
+	background: #c0392b;
+	color: white;
+	outline: none;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #666;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #666;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #666;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #666;
+}
+
+.area-search {
+	font-size: 30px !important;
+}
+
+.area-search-text {
+	font-size: 20px;
+}
+
+.area-search-wrapper {
+	cursor: pointer;
+}
+
+
+
+
+/*----------------------------- SLIDER --------------------------------*/
+
+.slider {
+	height: auto;
+	background-color: #fafafa;
+	padding-bottom: 100px;
+	padding-top: 20px;
+}
+
+.slider-head {
+	width: 100%;
+	padding: 60px 0px;
+	text-align: center;
+	color: #222;
+	font-weight: 500;
+	font-size: 40px; 
+	text-shadow: 1px 1px white;
+}
+
+.mac-frame {
+	padding: 00px 0px;
+	margin-left: -150px;
+}
+
+.slider-side-frame {
+	width : 450px;
+	height: auto;
+	position: relative;
+	float: right;
+	right: 50px;
+}
+
+.slider-desc {
+	width: 100%;
+	height: 86px;
+	margin: 3px;
+}
+
+.slider-desc-icon {
+	width: 60px;
+	font-size: 60px;
+	float: left;
+}
+
+.icon-1 {
+	color : #c0392b;
+}
+
+.icon-2 {
+	color : #27ae60;
+}
+
+.icon-3 {
+	color : #f39c12;
+}
+
+.icon-4 {
+	color : #16a085;
+}
+
+.icon-5 {
+	color : #2c3e50;
+}
+
+.slider-desc-text {
+	width: 100%;
+	padding-left: 90px;
+	padding-top: 10px;
+}
+
+.frmt {
+	text-transform: uppercase;
+	font-weight: 800;
+}
+
+
+
+
+/*----------------------------- FEATURES --------------------------------*/
+
+.features {
+	height: auto;
+	background-color: #eeece4;
+	padding-bottom: 120px;
+	padding-top: 0px;
+}
+
+.feature-box {
+	text-align: center;
+	text-shadow: 1px 1px white;
+}
+
+.feature-img {
+	width: 140px;
+	padding-bottom: 30px;
+}
+
+.feature-main {
+	font-weight: 500;
+	font-size: 30px;
+	padding: 10px 20px;
+}
+
+.feature-desc {
+	color: #555;
+	font-size: 15px;
+}
+
+.feature-head {
+	width: 100%;
+	padding: 80px 0px;
+	text-align: center;
+	color: #222;
+	font-weight: 500;
+	font-size: 40px; 
+	text-shadow: 1px 1px white;
+}
+
+
+/*----------------------------- CLIENTS --------------------------------*/
+
+.clients {
+	height: 300px;
+	background-color: #fafafa;
+}
+
+
+
+/*----------------------------- CUSTOMER LOVE --------------------------------*/
+
+.customer-love {
+	height: auto;
+	background-color: #eaeaea;
+	padding-bottom: 80px;
+	padding-top: 60px;
+}
+
+.customer-love-head {
+	width: 100%;
+	padding-bottom: 10px;
+	text-align: center;
+	color: #222;
+	font-weight: 500;
+	font-size: 40px; 
+	text-shadow: 1px 1px white;
+}
+
+.quote {
+	position: absolute;
+	color: rgba(0,0,0,0.1);
+	font-size: 200px;
+}
+
+.quote-before {
+	top: 130px;
+	left: calc(50% - 450px);
+}
+
+.quote-after {
+	bottom: 100px;
+	right: 200px;
+}
+
+.heart {
+	color: #d40000 !important;
+}
+
+/* carousel */
+#quote-carousel 
+{
+  padding: 0 10px 30px 10px;
+  margin-top: 30px 0px 0px;
+}
+
+.carousel-inner {
+	height: 300px;
+}
+
+/* Control buttons  */
+#quote-carousel .carousel-control
+{
+  background: none;
+  color: #222;
+  font-size: 2.3em;
+  text-shadow: none;
+  margin-top:280px;
+}
+/* Previous button  */
+#quote-carousel .carousel-control.left 
+{
+  left: -45px;
+  color: black !important;
+}
+/* Next button  */
+#quote-carousel .carousel-control.right 
+{
+  right: -45px;
+  color: black !important;
+}
+/* Changes the position of the indicators */
+#quote-carousel .carousel-indicators 
+{
+  right: 50%;
+  top: auto;
+  bottom: 0px;
+  margin-right: -19px;
+
+}
+/* Changes the color of the indicators */
+#quote-carousel .carousel-indicators li 
+{
+  background: #c0c0c0;
+  border: 0px !important;
+}
+#quote-carousel .carousel-indicators .active 
+{
+  background: #333333;
+}
+#quote-carousel img
+{
+  width: 400px;
+  border : 5px solid #ddd;
+}
+/* End carousel */
+
+.item blockquote {
+    border-left: none; 
+    margin: 0;
+}
+
+.item blockquote img {
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+/**
+  MEDIA QUERIES
+*/
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    #quote-carousel 
+    {
+      margin-bottom: 0;
+      padding: 0 40px 30px 40px;
+      margin-top: 30px;
+    }
+    
+}
+
+/* Small devices (tablets, up to 768px) */
+@media (max-width: 768px) { 
+    
+    /* Make the indicators larger for easier clicking with fingers/thumb on mobile */
+    
+    #quote-carousel .carousel-indicators {
+        bottom: -20px !important;  
+    }
+    #quote-carousel .carousel-indicators li {
+        display: inline-block;
+        margin: 0px 5px;
+        width: 15px;
+        height: 15px;
+    }
+    #quote-carousel .carousel-indicators li.active {
+        margin: 0px 5px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/*----------------------------- FOOTER --------------------------------*/
+
+.footer {
+	height: auto;
+	background-color: #202020;
+	padding: 20px 0px;
 }
 
 .links-wrapper, .social-wrapper {
@@ -189,6 +540,17 @@ a {
 	color: #dd4b39;
 }
 
+
+/*----------------------------- COPYRIGHT --------------------------------*/
+
+.copyright {
+	height: auto;
+	padding-bottom: 20px;
+	background-color: #111;
+	color: 	#555;
+	font-size: 15px;
+}
+
 .contact {
 	position: relative;
 	float: right;
@@ -205,48 +567,6 @@ a {
 	left: 20px;
 }
 
-.feature-box {
-	text-align: center;
-	text-shadow: 1px 1px white;
-}
 
-.feature-img {
-	width: 140px;
-	padding-bottom: 30px;
-}
 
-.feature-main {
-	font-weight: 500;
-	font-size: 30px;
-	padding: 10px 20px;
-}
 
-.feature-desc {
-	color: #555;
-	font-size: 15px;
-}
-
-.feature-head {
-	width: 100%;
-	padding: 80px 0px;
-	text-align: center;
-	color: #222;
-	font-weight: 500;
-	font-size: 40px; 
-	text-shadow: 1px 1px white;
-}
-
-.slider-head {
-	width: 100%;
-	padding: 60px 0px;
-	text-align: center;
-	color: #222;
-	font-weight: 500;
-	font-size: 40px; 
-	text-shadow: 1px 1px white;
-}
-
-.mac-frame {
-	padding: 00px 0px;
-	margin-left: -150px;
-}
