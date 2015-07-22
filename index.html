@@ -7,21 +7,27 @@
 		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
 		<link href="assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+		
 	</head>
 
 	<body>
-		<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
 		<script type="text/javascript" src="bower_components/skrollr/src/skrollr.js"></script>
 		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+		<script type="text/javascript" src="assets/plugins/jquery.scrollbox.js"></script>
 
 
 		<div class="block start" >
 	
 			<img class="main-img" src="assets/img/back1.jpg">
-			<div class="header" data-20="background:rgba(0,0,0,0);;border-bottom: 1px solid rgba(255,255,255,0.5);box-shadow: 0px 0px 50px 0px rgba(0,0,0,1);height:80px" data-100="background:rgba(50,50,50,1);height: 60px;box-shadow: -1px -3px 10px 4px rgba(0,0,0,0.75);border-bottom: 1px solid rgba(0,0,0,0);">
-				<img src="assets/img/logo.png" class="logo" data-20="top:8px" data-100="top:-2px">
-				<div class="nav-buttons"  data-20="padding-top:13px" data-100="padding-top:4px">
+			<div class="header" data-200="background:rgba(0,0,0,0);;border-bottom: 1px solid rgba(255,255,255,0.5);box-shadow: 0px 0px 50px 0px rgba(0,0,0,1);height:80px" data-500="background:rgba(50,50,50,1);height: 60px;box-shadow: -1px -3px 10px 4px rgba(0,0,0,0.75);border-bottom: 1px solid rgba(0,0,0,0);">
+				<img src="assets/img/logo.png" class="logo" data-200="top:8px" data-500="top:-2px">
+				<div class="header-search-bar-wrapper" data-200="top:-400px" data-500="top:12px">
+					<i class="header-search-icon fa fa-search"></i>
+					<input type="text" name="search" placeholder="Search for a restaurant...">
+					<button class="header-input-search">SEARCH</button>
+				</div>
+				<div class="nav-buttons"  data-200="padding-top:13px" data-500="padding-top:4px">
 					<div class="button ">Are you a Restaurant Owner ?</div>
 					<div class="button ">Login</div>
 					<div class="button makeup">Sign Up</div>
@@ -44,7 +50,7 @@
 					<span class="or">or</span>
 					<br><br>
 					<div class="area-search-wrapper">
-						<i class="area-search fa fa-map-marker"></i><span class="area-search-text">&nbsp;&nbsp;Browse all the restaurants in your area</span>
+						<i class="area-search fa fa-location-arrow "></i><span class="area-search-text">&nbsp;&nbsp;See all restuarants near me..</span>
 					</div>
 				</div>
 			</div>
@@ -53,6 +59,8 @@
 		<div class="block slider">
 			<div class="row">
 				<div class="slider-head col-md-12">Glimpses of the app...</div>
+			</div>
+			<div class="row">
 				<div class="col-md-12">
 					<img class="mac-frame" src='assets/img/mac2.png'>
 					<div class="slider-side-frame">
@@ -99,6 +107,8 @@
 		<div class="block features">
 			<div class="row">
 				<div class="class-md-12 feature-head">The best of features that give you unparalleled advantage ... </div>
+			</div>
+			<div class="row">
 				<div class="col-md-4 feature-box">
 					<img class="feature-img" src="assets/img/f1.png">
 					<div class="feature-main">Dining When And Where You Want</div>
@@ -118,6 +128,23 @@
 		</div>
 
 		<div class="block clients">
+			<div class='row'>
+			    <div id="demo5" class="scroll-img">
+			      	<ul>
+			        	<li><a href="http://www.faceyourmanga.com/mangatar.php?id=234" target="_blank"><img src="assets/img/c1.jpg"></a></li>
+				        <li><a href="http://www.faceyourmanga.com/mangatar.php?id=485" target="_blank"><img src="assets/img/c2.png"></a></li>
+				        <li><a href="http://www.faceyourmanga.com/mangatar.php?id=511" target="_blank"><img src="assets/img/c3.jpg"></a></li>
+				        <li><a href="http://www.faceyourmanga.com/mangatar.php?id=725" target="_blank"><img src="assets/img/c4.jpg"></a></li>
+				        <li><a href="http://www.faceyourmanga.com/mangatar.php?id=840" target="_blank"><img src="assets/img/c5.jpg"></a></li>
+				        <li><a href="http://www.faceyourmanga.com/mangatar.php?id=934" target="_blank"><img src="assets/img/c6.jpg"></a></li>
+				        <li><a href="http://www.faceyourmanga.com/mangatar.php?id=1295" target="_blank"><img src="assets/img/c7.jpg"></a></li>
+			      	</ul>
+			    </div>
+			    <div id="demo5-btn" class="text-center">
+			      	<button class="btn" id="demo5-backward"><i class="fa fa-chevron-left"></i> </button>
+			      	<button class="btn" id="demo5-forward"> <i class="fa fa-chevron-right"></i></button>
+			    </div>
+			</div>
 		</div>
 
 		<div class="block customer-love">
@@ -230,14 +257,27 @@
 		</div>
 
 		<script type="text/javascript">
-		    var s = skrollr.init();
+		    
 
 		    $(document).ready(function() {
-			  //Set the carousel options
-			  $('#quote-carousel').carousel({
-			    pause: true,
-			    interval: 4000,
-			  });
+			 	//Set the carousel options
+			  	$('#quote-carousel').carousel({
+			    	pause: true,
+			    	interval: 4000,
+			  	});
+			});
+
+			var s = skrollr.init();
+
+			$('#demo5').scrollbox({
+  				direction: 'h',
+  				distance: 210
+			});
+			$('#demo5-backward').click(function () {
+			 	$('#demo5').trigger('backward');
+			});
+			$('#demo5-forward').click(function () {
+			 	$('#demo5').trigger('forward');
 			});
 
 		</script>
