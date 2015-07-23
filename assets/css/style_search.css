@@ -196,9 +196,9 @@ body {
 }	
 
 .rest-info {
-	margin-top: -50px;
 	z-index: 100;
 	height: 100px;
+	background-color: #fff;
 }
 
 .rest-cvr {
@@ -211,4 +211,19 @@ body {
 	background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(246,246,246,0) 0%, rgba(0,0,0,1) 100%);
 	background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(246,246,246,0) 0%, rgba(0,0,0,1) 100%);
 	margin-top: -100px;
+}
+
+.rest-name {
+	color: white;
+	font-size: 28px;
+	font-weight: 200;
+	text-shadow: 1px 1px black;
+	bottom: 5px;
+	position: absolute;
+}
+
+.rest-add {
+	padding-top: 10px;
+	color: #555;
+	font-size: 12px;
 }
