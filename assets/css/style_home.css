@@ -186,7 +186,7 @@ body {
 
 .or {
 	color: white;
-	font-weight: 900;
+	font-weight: 800;
 	text-shadow: 1px 1px black;
 	font-size: 25px;
 }
@@ -257,8 +257,12 @@ body {
 
 .area-search-wrapper {
 	cursor: pointer;
+	border: 1px solid white;
+	border-radius: 4px;
+	width: 340px;
+	margin-left: calc(50% - 170px);
+	padding: 5px 0px;
 }
-
 
 
 
