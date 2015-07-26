@@ -8,6 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
 		<link href="assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 		<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAcPoJAXqhV1IrYfmcV0vXMB5fzPeYrNc"></script>
 	
 	</head>
 
@@ -31,29 +32,87 @@
 			</div>
 		</div>
 
-		<div class="header2" data-0="position:absolute" data-380="position:fixed">
+		<div class="header2" data-339="position:absolute;margin-top:400px" data-340="position:fixed;margin-top:60px">
 			<ul>
-				<li>ABOUT</li>
-				<li>MENU</li>
-				<li>PHOTOS</li>
-				<li>ABOUT</li>
-				<li>ABOUT</li>
+				<li tab="about" class="active-tab">ABOUT</li>
+				<li tab="reviews">REVIEWS</li>
+				<li tab="menu">MENU</li>
+				<li tab="photos">PHOTOS</li>
 			</ul>
 		</div>
 
 		<div class="container-fluid img-head">
-			<img class="img-container" src="assets/img/rest-main/rmain1.jpg">
-			<div class="img-cover"></div>
-		</div>
-
-		<div class="container text-container">
-			<div class="main-text">
-				Candies
+			<div class="row">
+				<div class="img-container col-md-12">
+					<img src="assets/img/rest-main/rmain1.jpg">
+				</div>
+				<div class="img-cover col-md-12">
+					<div class="main-text">
+						Candies
+					</div>		
+				</div>
 			</div>
 		</div>
 
+		<div class="container text-container">
+			
 
-<!--
+			<div id="block-about" class="main-block block-about">
+				<div class="row">
+					<div class="col-lg-10 col-lg-offset-1">
+						<div class="block-content-head">
+							<i class="fa fa-heart"></i>&nbsp; KNOW THE PLACE
+						</div>
+						<div class="block-content-body">
+						<p>
+							It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+						</p>
+						<p>
+							You asked, Font Awesome delivers with 40 shiny new icons in version 4.3. Want to request new icons? Here's how. Need vectors or want to use on the desktop? Check the cheatsheet.
+						</p>
+						</div>
+
+						<div class="block-content-head">
+							<i class="fa fa-thumb-tack"></i>&nbsp; LOCATION
+						</div>
+						<div class="block-content-body">
+							   450 Wharncliffe Rd S, London, ON N6J2M6 <br><br>
+							   <div id="map-canvas"></div>
+						</div>
+
+						<div class="block-content-head">
+							<i class="fa fa-fax"></i>&nbsp; CONTACT
+						</div>
+						<div class="block-content-body">
+							   +1 (232) 242-8924
+						</div>
+						
+					</div>
+				</div>
+			</div>
+
+			<div id="block-reviews" style="display:none" class="main-block block-reviews">
+				<div class="row">
+					<div class="col-lg-10 col-lg-offset-1"></div>
+				</div>
+			</div>
+
+			<div id="block-menu" style="display:none" class="main-block block-menu">
+				<div class="row">
+					<div class="col-lg-10 col-lg-offset-1"></div>
+				</div>
+			</div>
+
+			<div id="block-photos" style="display:none" class="main-block block-photos">
+				<div class="row">
+					<div class="col-lg-10 col-lg-offset-1"></div>
+				</div>
+			</div>
+
+		</div>
+
+
+
 		<div class="block footer">
 			<div class="row social-wrapper">
 				<div class="col-md-10 col-md-offset-1">
@@ -85,15 +144,42 @@
 			<div class="state"><i class="fa fa-copyright "></i> Rafito Inc.</div>
 			<div class="contact"><i class="fa fa-map-marker "></i> 1600 Amphitheatre Parkway, Mountain View, CA 94043&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-phone">&nbsp;</i>+1 243 36336</div>
 		</div>
--->
+
 
 
 
 		<script type="text/javascript">
+			
+			var s
+
+			initializeSkrollr();
 		    
+		    $(".header2 ul li").click(function() {
+		    	$(".header2 ul li").removeClass("active-tab");
+		    	$(this).addClass('active-tab');
+		    	$(".main-block").fadeOut('100');
+		    	$(".block-"+$(this).attr("tab")).delay(400).fadeIn(100);
+		    });
+
+		    function initializeSkrollr() {
+		    	s  = skrollr.init();
+		    	$("body").css("height", "auto");
+		    }
 
 
 		</script>
+
+		<script type="text/javascript">
+			function initialize() {
+				var mapOptions = {
+				  center: { lat: 19.418574, lng: 80.2477477},
+				  zoom: 8
+				};
+				var map = new google.maps.Map(document.getElementById('map-canvas'),
+				    mapOptions);
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+			</script>
 
 	</body>
 </html>

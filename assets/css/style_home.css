@@ -349,13 +349,14 @@ body {
 .features {
 	height: auto;
 	background-color: #eeece4;
-	padding-bottom: 120px;
+	padding-bottom: 20px;
 	padding-top: 0px;
 }
 
 .feature-box {
 	text-align: center;
 	text-shadow: 1px 1px white;
+	padding-bottom: 100px;
 }
 
 .feature-img {
@@ -387,6 +388,46 @@ body {
 
 /*----------------------------- CLIENTS --------------------------------*/
 
+@media (max-width: 768px) {
+	.scroll-img {
+		width: 460px;
+		height: 160px;
+		overflow: hidden;
+		font-size: 0;
+		margin-left: calc(50% - 230px);
+	}
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+	.scroll-img {
+		width: 700px;
+		height: 160px;
+		overflow: hidden;
+		font-size: 0;
+		margin-left: calc(50% - 350px);
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+	.scroll-img {
+		width: 900px;
+		height: 160px;
+		overflow: hidden;
+		font-size: 0;
+		margin-left: calc(50% - 450px);
+	}
+}
+
+@media (min-width: 1200px) {
+	.scroll-img {
+		width: 1100px;
+		height: 160px;
+		overflow: hidden;
+		font-size: 0;
+		margin-left: calc(50% - 550px);
+	}
+}
+
 .clients {
 	height: auto;
 	background-color: #fff;
@@ -403,13 +444,6 @@ body {
 	text-shadow: 1px 1px white;
 }
 
-.scroll-img {
-	width: 1100px;
-	height: 160px;
-	overflow: hidden;
-	font-size: 0;
-	margin-left: calc(50% - 550px);
-}
 
 .scroll-img ul {
 	width: 700px;
@@ -522,13 +556,11 @@ body {
 /* Previous button  */
 #quote-carousel .carousel-control.left 
 {
-  left: -45px;
   color: black !important;
 }
 /* Next button  */
 #quote-carousel .carousel-control.right 
 {
-  right: -45px;
   color: black !important;
 }
 /* Changes the position of the indicators */
