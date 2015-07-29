@@ -6,6 +6,8 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/style_search.css">
 		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+		<link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-slider/bootstrap-slider.css">
+
 		<link href="assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 		<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
 	
@@ -15,6 +17,15 @@
 		<script type="text/javascript" src="bower_components/skrollr/src/skrollr.js"></script>
 		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 		<script type="text/javascript" src="assets/plugins/jquery.scrollbox.js"></script>
+		<script type="text/javascript" src="assets/plugins/bootstrap-slider/bootstrap-slider.js"></script>
+
+		<div class="alt-search" data-480="display:none" data-500="display:block">
+			<div class="alt-search-bar-wrapper">
+				<i class="alt-search-icon fa fa-search"></i>
+				<input type="text" name="search" placeholder="Search for a restaurant...">
+				<button class="alt-input-search">SEARCH</button>
+			</div>
+		</div>
 
 
 		<div class="header">
@@ -25,31 +36,96 @@
 				<button class="header-input-search">SEARCH</button>
 			</div>
 			<div class="nav-buttons" >
-				<div class="button ">Are you a Restaurant Owner ?</div>
-				<div class="button ">Login</div>
-				<div class="button makeup">Sign Up</div>
+				<div class="b1 button ">Are you a Restaurant Owner ?</div>
+				<div class="b2 button ">Login</div>
+				<div class="b3 button makeup">Sign Up</div>
 			</div>
 		</div>
 
 		<div class="container search-face">
 			<div class="row">
-				<div class="col-sm-4 col-md-3 search-filter-wrapper">
+				<div class="col-xs-12 col-sm-4 col-md-3 search-filter-wrapper">
 					<div class="row">
 						<div class="search-filter-head col-sm-12"><i class="fa fa-tasks" ></i>&nbsp;&nbsp;Filter your search </div>
 					</div>
+					<div class="row">
+						<div class="filter filter-cuisine col-xs-12">
+							<div class="filter-head">
+								<i class="fa fa-cutlery"></i>&nbsp;&nbsp;CUISINE
+							</div>
+							<select>
+								<option value="breakfast">Breakfast</option>
+								<option value="british">British</option>
+								<option value="bristo">Bristo</option>
+								<option value="barbecue">Barbecue</option>
+								<option value="carribean">Carribean</option>
+								<option value="cuban">Cuban</option>
+								<option value="french">French</option>
+								<option value="german">German</option>
+								<option value="indian">Indian</option>
+								<option value="italian">Italian</option>
+								<option value="kebab">Kebab</option>
+								<option value="korean">Korean</option>
+								<option value="lebanese">Lebanese</option>
+								<option value="mexican">Mexican</option>
+								<option value="noodle-bar">Noodle Bar</option>
+								<option value="persian">Persian</option>
+								<option value="pizza">Pizza</option>
+								<option value="private-club">Private Club</option>
+								<option value="pub">Pub</option>
+								<option value="salads">Salads</option>
+								<option value="sandwiches">Sandwiches</option>
+								<option value="seafood">Seafood</option>
+								<option value="soups">Soups</option>
+								<option value="steakhouse">Steakhouse</option>
+								<option value="sushi">Sushi</option>
+								<option value="thai">Thai</option>
+								<option value="vegetarian">Vegetarian</option>
+								<option value="wine-bar">Wine Bar</option>
+							</select>
+							<div class="filter-cuisine-selected">
+								<ul></ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="filter filter-location col-xs-12">
+							<div class="filter-head">
+								<i class="fa fa-map-marker"></i>&nbsp;&nbsp;LOCATION
+							</div>
+							<input type="text" placeholder="..." class="filter-location" >
+						</div>
+						
+					</div>
+
+					<div class="row" style="padding-top:5px;">
+						<div class="filter filter-proximity col-xs-12">
+							<div class="filter-head">
+								<i class="fa fa-compass"></i>&nbsp;&nbsp;PROXIMITY
+							</div>
+							<input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="2" data-slider-step="0.1" data-slider-value="0.5"/>
+						</div>
+						
+					</div>
+
+					
+
+
+
 				</div>
-				<div class="col-sm-8 col-md-9 search-result-wrapper">
+				<div class="col-xs-12 col-sm-8 col-md-9 search-result-wrapper">
 					<div class="row">
-						<div value="1" class="rest-result col-lg-6 col-md-6 col-sm-12">
+						<div value="1" class="rest-result col-lg-6 col-md-6 col-xs-12">
 							<div class="row rest-wrapper">
-								<img class="col-sm-12 rest-img" src="assets/img/rest-thumbs/rt1.jpg">
-								<div class="col-sm-12 rest-cvr">
+								<img class="col-xs-12 rest-img" src="assets/img/rest-thumbs/rt1.jpg">
+								<div class="col-xs-12 rest-cvr">
 									<div class="rest-name">Hotel Courtyard Marriot</div>
 									<div class="rest-cuisine">
 										Continental, North Indian, Chinese, Snacks
 									</div>
 								</div>
-								<div class="col-sm-12 rest-info">
+								<div class="col-xs-12 rest-info">
 									<div class="rest-add">
 										<span style="color: #c0392b;font-weight:800"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;</span>
 										450 Wharncliffe Rd S, London, ON N6J2M6
@@ -68,16 +144,16 @@
 								</div>
 							</div>
 						</div>
-						<div value="2" class="rest-result col-lg-6 col-md-6 col-sm-12">
+						<div value="2" class="rest-result col-lg-6 col-md-6 col-xs-12">
 							<div class="row rest-wrapper">
-								<img class="col-sm-12 rest-img" src="assets/img/rest-thumbs/rt2.jpg">
-								<div class="col-sm-12 rest-cvr">
+								<img class="col-xs-12 rest-img" src="assets/img/rest-thumbs/rt2.jpg">
+								<div class="col-xs-12 rest-cvr">
 									<div class="rest-name">El Chico</div>
 									<div class="rest-cuisine">
 										British, Asian, Arabian, Middle Eastern, International
 									</div>
 								</div>
-								<div class="col-sm-12 rest-info">
+								<div class="col-xs-12 rest-info">
 									<div class="rest-add">
 										<span style="color: #c0392b;font-weight:800"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;</span>
 										Al Hadeeqa Street, Wasl Square, Al Safa, Dubai
@@ -97,17 +173,18 @@
 							</div>
 						</div>
 					</div>
+					
 					<div class="row">
-						<div value="3" class="rest-result col-lg-6 col-md-6 col-sm-12">
+						<div value="3" class="rest-result col-lg-6 col-md-6 col-xs-12">
 							<div class="row rest-wrapper">
-								<img class="col-sm-12 rest-img" src="assets/img/rest-thumbs/rt3.jpg">
-								<div class="col-sm-12 rest-cvr">
+								<img class="col-xs-12 rest-img" src="assets/img/rest-thumbs/rt3.jpg">
+								<div class="col-xs-12 rest-cvr">
 									<div class="rest-name">The Tamarind Tree</div>
 									<div class="rest-cuisine">
 										American, Desserts
 									</div>
 								</div>
-								<div class="col-sm-12 rest-info">
+								<div class="col-xs-12 rest-info">
 									<div class="rest-add">
 										<span style="color: #c0392b;font-weight:800"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;</span>
 										The Galleria, Al Wasl Road, Al Safa, Dubai
@@ -126,16 +203,16 @@
 								</div>
 							</div>
 						</div>
-						<div value="4" class="rest-result col-lg-6 col-md-6 col-sm-12">
+						<div value="4" class="rest-result col-lg-6 col-md-6 col-xs-12">
 							<div class="row rest-wrapper">
-								<img class="col-sm-12 rest-img" src="assets/img/rest-thumbs/rt4.jpg">
-								<div class="col-sm-12 rest-cvr">
+								<img class="col-xs-12 rest-img" src="assets/img/rest-thumbs/rt4.jpg">
+								<div class="col-xs-12 rest-cvr">
 									<div class="rest-name">Sapphire Blue</div>
 									<div class="rest-cuisine">
 										Mediterranean, Italian, Thai, European
 									</div>
 								</div>
-								<div class="col-sm-12 rest-info">
+								<div class="col-xs-12 rest-info">
 									<div class="rest-add">
 										<span style="color: #c0392b;font-weight:800"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;</span>
 										Unit 4, Plot 71, Sai Krupa, Sector 12, Vashi, Navi Mumbai
@@ -155,17 +232,18 @@
 							</div>
 						</div>
 					</div>
+
 					<div class="row">
-						<div value="1" class="rest-result col-lg-6 col-md-6 col-sm-12">
+						<div value="1" class="rest-result col-lg-6 col-md-6 col-xs-12">
 							<div class="row rest-wrapper">
-								<img class="col-sm-12 rest-img" src="assets/img/rest-thumbs/rt1.jpg">
-								<div class="col-sm-12 rest-cvr">
+								<img class="col-xs-12 rest-img" src="assets/img/rest-thumbs/rt1.jpg">
+								<div class="col-xs-12 rest-cvr">
 									<div class="rest-name">Hotel Courtyard Marriot</div>
 									<div class="rest-cuisine">
 										Continental, North Indian, Chinese, Snacks
 									</div>
 								</div>
-								<div class="col-sm-12 rest-info">
+								<div class="col-xs-12 rest-info">
 									<div class="rest-add">
 										<span style="color: #c0392b;font-weight:800"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;</span>
 										450 Wharncliffe Rd S, London, ON N6J2M6
@@ -184,16 +262,16 @@
 								</div>
 							</div>
 						</div>
-						<div value="2" class="rest-result col-lg-6 col-md-6 col-sm-12">
+						<div value="2" class="rest-result col-lg-6 col-md-6 col-xs-12">
 							<div class="row rest-wrapper">
-								<img class="col-sm-12 rest-img" src="assets/img/rest-thumbs/rt2.jpg">
-								<div class="col-sm-12 rest-cvr">
+								<img class="col-xs-12 rest-img" src="assets/img/rest-thumbs/rt2.jpg">
+								<div class="col-xs-12 rest-cvr">
 									<div class="rest-name">El Chico</div>
 									<div class="rest-cuisine">
 										British, Asian, Arabian, Middle Eastern, International
 									</div>
 								</div>
-								<div class="col-sm-12 rest-info">
+								<div class="col-xs-12 rest-info">
 									<div class="rest-add">
 										<span style="color: #c0392b;font-weight:800"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;</span>
 										Al Hadeeqa Street, Wasl Square, Al Safa, Dubai
@@ -213,17 +291,18 @@
 							</div>
 						</div>
 					</div>
+					
 					<div class="row">
-						<div value="3" class="rest-result col-lg-6 col-md-6 col-sm-12">
+						<div value="3" class="rest-result col-lg-6 col-md-6 col-xs-12">
 							<div class="row rest-wrapper">
-								<img class="col-sm-12 rest-img" src="assets/img/rest-thumbs/rt3.jpg">
-								<div class="col-sm-12 rest-cvr">
+								<img class="col-xs-12 rest-img" src="assets/img/rest-thumbs/rt3.jpg">
+								<div class="col-xs-12 rest-cvr">
 									<div class="rest-name">The Tamarind Tree</div>
 									<div class="rest-cuisine">
 										American, Desserts
 									</div>
 								</div>
-								<div class="col-sm-12 rest-info">
+								<div class="col-xs-12 rest-info">
 									<div class="rest-add">
 										<span style="color: #c0392b;font-weight:800"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;</span>
 										The Galleria, Al Wasl Road, Al Safa, Dubai
@@ -242,16 +321,16 @@
 								</div>
 							</div>
 						</div>
-						<div value="4" class="rest-result col-lg-6 col-md-6 col-sm-12">
+						<div value="4" class="rest-result col-lg-6 col-md-6 col-xs-12">
 							<div class="row rest-wrapper">
-								<img class="col-sm-12 rest-img" src="assets/img/rest-thumbs/rt4.jpg">
-								<div class="col-sm-12 rest-cvr">
+								<img class="col-xs-12 rest-img" src="assets/img/rest-thumbs/rt4.jpg">
+								<div class="col-xs-12 rest-cvr">
 									<div class="rest-name">Sapphire Blue</div>
 									<div class="rest-cuisine">
 										Mediterranean, Italian, Thai, European
 									</div>
 								</div>
-								<div class="col-sm-12 rest-info">
+								<div class="col-xs-12 rest-info">
 									<div class="rest-add">
 										<span style="color: #c0392b;font-weight:800"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;</span>
 										Unit 4, Plot 71, Sai Krupa, Sector 12, Vashi, Navi Mumbai
@@ -271,17 +350,18 @@
 							</div>
 						</div>
 					</div>
+
 					<div class="row">
-						<div value="1" class="rest-result col-lg-6 col-md-6 col-sm-12">
+						<div value="1" class="rest-result col-lg-6 col-md-6 col-xs-12">
 							<div class="row rest-wrapper">
-								<img class="col-sm-12 rest-img" src="assets/img/rest-thumbs/rt1.jpg">
-								<div class="col-sm-12 rest-cvr">
+								<img class="col-xs-12 rest-img" src="assets/img/rest-thumbs/rt1.jpg">
+								<div class="col-xs-12 rest-cvr">
 									<div class="rest-name">Hotel Courtyard Marriot</div>
 									<div class="rest-cuisine">
 										Continental, North Indian, Chinese, Snacks
 									</div>
 								</div>
-								<div class="col-sm-12 rest-info">
+								<div class="col-xs-12 rest-info">
 									<div class="rest-add">
 										<span style="color: #c0392b;font-weight:800"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;</span>
 										450 Wharncliffe Rd S, London, ON N6J2M6
@@ -300,16 +380,16 @@
 								</div>
 							</div>
 						</div>
-						<div value="2" class="rest-result col-lg-6 col-md-6 col-sm-12">
+						<div value="2" class="rest-result col-lg-6 col-md-6 col-xs-12">
 							<div class="row rest-wrapper">
-								<img class="col-sm-12 rest-img" src="assets/img/rest-thumbs/rt2.jpg">
-								<div class="col-sm-12 rest-cvr">
+								<img class="col-xs-12 rest-img" src="assets/img/rest-thumbs/rt2.jpg">
+								<div class="col-xs-12 rest-cvr">
 									<div class="rest-name">El Chico</div>
 									<div class="rest-cuisine">
 										British, Asian, Arabian, Middle Eastern, International
 									</div>
 								</div>
-								<div class="col-sm-12 rest-info">
+								<div class="col-xs-12 rest-info">
 									<div class="rest-add">
 										<span style="color: #c0392b;font-weight:800"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;</span>
 										Al Hadeeqa Street, Wasl Square, Al Safa, Dubai
@@ -329,17 +409,18 @@
 							</div>
 						</div>
 					</div>
+					
 					<div class="row">
-						<div value="3" class="rest-result col-lg-6 col-md-6 col-sm-12">
+						<div value="3" class="rest-result col-lg-6 col-md-6 col-xs-12">
 							<div class="row rest-wrapper">
-								<img class="col-sm-12 rest-img" src="assets/img/rest-thumbs/rt3.jpg">
-								<div class="col-sm-12 rest-cvr">
+								<img class="col-xs-12 rest-img" src="assets/img/rest-thumbs/rt3.jpg">
+								<div class="col-xs-12 rest-cvr">
 									<div class="rest-name">The Tamarind Tree</div>
 									<div class="rest-cuisine">
 										American, Desserts
 									</div>
 								</div>
-								<div class="col-sm-12 rest-info">
+								<div class="col-xs-12 rest-info">
 									<div class="rest-add">
 										<span style="color: #c0392b;font-weight:800"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;</span>
 										The Galleria, Al Wasl Road, Al Safa, Dubai
@@ -358,7 +439,36 @@
 								</div>
 							</div>
 						</div>
+						<div value="4" class="rest-result col-lg-6 col-md-6 col-xs-12">
+							<div class="row rest-wrapper">
+								<img class="col-xs-12 rest-img" src="assets/img/rest-thumbs/rt4.jpg">
+								<div class="col-xs-12 rest-cvr">
+									<div class="rest-name">Sapphire Blue</div>
+									<div class="rest-cuisine">
+										Mediterranean, Italian, Thai, European
+									</div>
+								</div>
+								<div class="col-xs-12 rest-info">
+									<div class="rest-add">
+										<span style="color: #c0392b;font-weight:800"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;</span>
+										Unit 4, Plot 71, Sai Krupa, Sector 12, Vashi, Navi Mumbai
+										<br>
+										<span style="color: #c0392b;font-weight:800"><i class="fa fa-phone"></i>&nbsp;&nbsp;</span>
+										 +91 (22) 383-6421
+										<br>
+									</div>
+									<div class="rest-buttons-wrapper">
+										<button class="rest-button-seat rest-button">SEAT ME</button>
+										<button class="rest-button-menu rest-button">MENU</button>
+										<button class="rest-button-menu rest-button">
+											<i class="fa fa-star"></i> 7
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
+					
 					<div class="row">
 						<div class="col-sm-12 load-more-wrapper">
 							<div class="load-more"><i class="fa fa-refresh"></i>&nbsp;&nbsp;loading more ...</div>
@@ -405,7 +515,23 @@
 
 		<script type="text/javascript">
 		    
+		    $(".filter-cuisine select").click(function() {
+		    	var text = this.options[this.selectedIndex].innerText;
 
+		    	var ele = '<li><i class="fa fa-times"></i>&nbsp;&nbsp;'+text+'</li>'
+
+		    	$(".filter-cuisine-selected ul").append(ele);
+
+		    	$(".filter-cuisine-selected ul li i").click(function(){
+		    		$(this).parent().remove();
+		    	}) 
+		    });
+
+		    $('#ex1').slider({
+				formatter: function(value) {
+					return 'Range: ' + value + ' km';
+				}
+			});
 
 		</script>
 
