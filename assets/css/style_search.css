@@ -298,7 +298,7 @@ body {
 }
 
 .filter {
-	padding: 30px 10px 0px 10px !important;
+	padding: 25px 10px 0px 10px !important;
 }
 
 .filter-head {
@@ -338,6 +338,11 @@ body {
 
 .filter-cuisine-selected ul li i{
 	cursor: pointer;
+}
+
+.filter-proximity .range {
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 10px;
 }
 
 

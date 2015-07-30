@@ -54,6 +54,7 @@
 								<i class="fa fa-cutlery"></i>&nbsp;&nbsp;CUISINE
 							</div>
 							<select>
+								<option value="...">Select a cuisine</option>
 								<option value="breakfast">Breakfast</option>
 								<option value="british">British</option>
 								<option value="bristo">Bristo</option>
@@ -105,6 +106,7 @@
 								<i class="fa fa-compass"></i>&nbsp;&nbsp;PROXIMITY
 							</div>
 							<input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="2" data-slider-step="0.1" data-slider-value="0.5"/>
+							<div class="range"></div>
 						</div>
 						
 					</div>
@@ -518,18 +520,22 @@
 		    $(".filter-cuisine select").click(function() {
 		    	var text = this.options[this.selectedIndex].innerText;
 
-		    	var ele = '<li><i class="fa fa-times"></i>&nbsp;&nbsp;'+text+'</li>'
+		    	if(text != "Select a cuisine") {
 
-		    	$(".filter-cuisine-selected ul").append(ele);
+			    	var ele = '<li><i class="fa fa-times"></i>&nbsp;&nbsp;'+text+'</li>'
 
-		    	$(".filter-cuisine-selected ul li i").click(function(){
-		    		$(this).parent().remove();
-		    	}) 
+			    	$(".filter-cuisine-selected ul").append(ele);
+
+			    	$(".filter-cuisine-selected ul li i").click(function(){
+			    		$(this).parent().remove();
+			    	}) ;
+			    }
 		    });
 
 		    $('#ex1').slider({
 				formatter: function(value) {
-					return 'Range: ' + value + ' km';
+					$(".filter-proximity .range").html('Range: <b>' + value + ' miles</b>')
+					return 'Range: ' + value + ' miles';
 				}
 			});
 
