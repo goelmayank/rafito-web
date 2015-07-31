@@ -17,6 +17,13 @@
 		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 		<script type="text/javascript" src="assets/plugins/jquery.scrollbox.js"></script>
 
+		<div class="alt-search">
+			<div class="alt-search-bar-wrapper">
+				<i class="alt-search-icon fa fa-search"></i>
+				<input type="text" name="search" placeholder="Search for a restaurant...">
+				<button class="alt-input-search">SEARCH</button>
+			</div>
+		</div>
 
 		<div class="header">
 			<img src="assets/img/logo.png" class="logo" >
@@ -26,9 +33,9 @@
 				<button class="header-input-search">SEARCH</button>
 			</div>
 			<div class="nav-buttons" >
-				<div class="button ">Are you a Restaurant Owner ?</div>
-				<div class="button ">Login</div>
-				<div class="button makeup">Sign Up</div>
+				<div class="b1 button ">Are you a Restaurant Owner ?</div>
+				<div class="b2 button ">Login</div>
+				<div class="b3 button makeup">Sign Up</div>
 			</div>
 		</div>
 
@@ -37,7 +44,6 @@
 				<li tab="about" class="active-tab">ABOUT</li>
 				<li tab="menu">MENU</li>
 				<li tab="photos">PHOTOS</li>
-				<li tab="reach">REACH</li>
 			</ul>
 		</div>
 
@@ -47,9 +53,26 @@
 					<img src="assets/img/rest-main/rmain1.jpg">
 				</div>
 				<div class="img-cover col-md-12">
-					<div class="main-text">
-						Candies
-					</div>		
+					<div class="container main-text-wrapper">
+						<div class="main-text">
+							Candies
+							<button class="main-button-seat main-button">
+								seat me
+							</button>
+							<button class="main-button-star main-button">
+								<i class="fa fa-star"></i> <span class="star-count">3</span>
+							</button>
+						</div>	
+						<div class="under-main-text">
+							Continental, North Indian, Chinese, Snacks
+						</div>	
+						<div class="under-main-text-address">
+							450 Wharncliffe Rd S, London, ON N6J2M6<br>
+							+1 (232) 242-8924<br>
+							happytohelp@candies.co.in<br>
+							http://candies.co.in
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -73,19 +96,49 @@
 						</div>
 
 						<div class="block-content-head">
-							<i class="fa fa-cutlery"></i>&nbsp; CUISINE
+							<i class="fa fa-thumb-tack"></i>&nbsp; LOCATION
 						</div>
 						<div class="block-content-body">
-							Continental, North Indian, Chinese, Thai, International
+							<br>
+							<div id="map-canvas"></div>
 						</div>
 
 						<div class="block-content-head">
 							<i class="fa fa-clock-o"></i>&nbsp; TIMINGS	
 						</div>
 						<div class="block-content-body">
-						<p>
-							Opening times
-						</p>
+						<table class="rest-timings" border="0" cellpadding="10" cellspacing="10">
+							<tbody>
+								<tr>
+									<td>Monday</td>
+									<td>12:00pm - 11:00pm</td>
+								</tr>
+								<tr>
+									<td>Tuesday</td>
+									<td>12:00pm - 11:00pm</td>
+								</tr>
+								<tr>
+									<td>Wednesday</td>
+									<td>12:00pm - 11:00pm</td>
+								</tr>
+								<tr>
+									<td>Thursday</td>
+									<td>12:00pm - 11:00pm</td>
+								</tr>
+								<tr>
+									<td>Friday</td>
+									<td>12:00pm - 11:00pm</td>
+								</tr>
+								<tr>
+									<td>Saturday</td>
+									<td>12:00pm - 11:00pm</td>
+								</tr>
+								<tr>
+									<td>Sunday</td>
+									<td>12:00pm - 11:00pm</td>
+								</tr>
+							</tbody>
+						</table>
 						</div>
 
 						
@@ -128,41 +181,6 @@
 			<div id="block-photos" style="display:none" class="main-block block-photos">
 				<div class="row">
 					<div class="col-lg-10 col-lg-offset-1"></div>
-				</div>
-			</div>
-
-			<div id="block-reach" style="display:none" class="main-block block-reach">
-				<div class="row">
-					<div class="col-lg-10 col-lg-offset-1">
-						<div class="block-content-head">
-							<i class="fa fa-thumb-tack"></i>&nbsp; LOCATION
-						</div>
-						<div class="block-content-body">
-							   450 Wharncliffe Rd S, London, ON N6J2M6 <br><br>
-							   <div id="map-canvas"></div>
-						</div>
-
-						<div class="block-content-head">
-							<i class="fa fa-fax"></i>&nbsp; CONTACT
-						</div>
-						<div class="block-content-body">
-							   +1 (232) 242-8924, +1 34 131 25292
-						</div>
-
-						<div class="block-content-head">
-							<i class="fa fa-envelope"></i>&nbsp; EMAIL
-						</div>
-						<div class="block-content-body">
-							   happytohelp@candies.co.in
-						</div>
-
-						<div class="block-content-head">
-							<i class="fa fa-globe"></i>&nbsp; WEB
-						</div>
-						<div class="block-content-body">
-							   http://candies.co.in
-						</div>
-					</div>
 				</div>
 			</div>
 
@@ -216,6 +234,23 @@
 		    	$(this).addClass('active-tab');
 		    	$(".main-block").fadeOut('100');
 		    	$(".block-"+$(this).attr("tab")).delay(400).fadeIn(100);
+		    });
+
+		    var starred = 0;
+
+		    $(".main-button-star").click(function() {
+		    	if(starred == 0) {
+		    		starred = 1
+		    		/* AJAX TO NOTE THE STAR BY USER */
+		    		$(this).css({"background-color": "#c0392b", "border" : "1px solid #c0392b"});
+		    		$(".star-count").html( parseInt($(".star-count").html())+1 );
+		    	}
+		    	else {
+		    		starred = 0
+		    		/* AJAX TO NOTE THE de-STAR BY USER */
+		    		$(this).css({"background-color": "transparent", "border" : "1px solid #fff"});
+		    		$(".star-count").html( parseInt($(".star-count").html())-1 );
+		    	}
 		    });
 
 		    function initializeSkrollr() {
