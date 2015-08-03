@@ -6,6 +6,8 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/style_resto.css">
 		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/glisse.css">
+
 		<link href="assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 		<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAcPoJAXqhV1IrYfmcV0vXMB5fzPeYrNc"></script>
@@ -82,7 +84,7 @@
 		<div class="container text-container">
 			
 
-			<div id="block-about" class="main-block block-about">
+			<div id="block-about" style="display:none" class="main-block block-about">
 				<div class="row">
 					<div class="col-lg-10 col-lg-offset-1">
 						<div class="block-content-head">
@@ -180,9 +182,25 @@
 				</div>
 			</div>
 
-			<div id="block-photos" style="display:none" class="main-block block-photos">
+			<div id="block-photos" style="display:block" class="main-block block-photos">
 				<div class="row">
-					<div class="col-lg-10 col-lg-offset-1"></div>
+					<div class="col-lg-10 col-lg-offset-1">
+						<div class="photo-wrapper">
+							<img class="photo-thumb" src="assets/img/rest-photos/t/p1.jpeg" rel="grp" data-glisse-big="assets/img/rest-photos/view1.jpg" title="default is this !" >
+						</div>
+						<div class="photo-wrapper">
+							<img class="photo-thumb" src="assets/img/rest-photos/t/p2.jpeg" rel="grp" data-glisse-big="assets/img/rest-photos/view2.jpg" title="default is this !" >
+						</div>
+						<div class="photo-wrapper">
+							<img class="photo-thumb" src="assets/img/rest-photos/t/p3.jpeg" rel="grp" data-glisse-big="assets/img/rest-photos/view3.jpg" title="default is this !" >
+						</div>
+						<div class="photo-wrapper">
+							<img class="photo-thumb" src="assets/img/rest-photos/t/p4.jpeg" rel="grp" data-glisse-big="assets/img/rest-photos/view4.jpg" title="default is this !" >
+						</div>
+						<div class="photo-wrapper">
+							<img class="photo-thumb" src="assets/img/rest-photos/t/p5.jpeg" rel="grp" data-glisse-big="assets/img/rest-photos/view5.jpg" title="default is this !" >
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -222,11 +240,11 @@
 			<div class="contact"><i class="fa fa-map-marker "></i> 1600 Amphitheatre Parkway, Mountain View, CA 94043&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-phone">&nbsp;</i>+1 243 36336</div>
 		</div>
 
-
+		
+		<script type="text/javascript" src="assets/js/glisse.js"></script>
 		<script type="text/javascript" src="assets/js/resto.js"></script>
 		
 
-		
 
 	</body>
 </html>

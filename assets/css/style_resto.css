@@ -420,6 +420,20 @@ td{
 	border-radius: 2px;
 }
 
+.photo-wrapper {
+	width: 130px;
+	height: 130px;
+	border: 1px solid #555;
+	position: relative;
+	float: left;
+	margin: 5px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.photo-wrapper img {
+	height: 100%;
+}
 
 
 /*---------------------------------------- FOOTER ----------------------------------------------*/

@@ -24,13 +24,8 @@ $(".filter-cuisine select").change(function() {
     	$(".filter-cuisine-selected ul").append(ele);
     	$(".filter-cuisine-selected ul li i").click(function(){
     		var text = $(this).parent().text().trim();
-    		//console.log($(this).parent().text());
-    		//console.log("text  \n"+text);
     		for(var i=0;i<cuisine_list.length;i++) {
-    			//console.log(cuisine_list[i])
-    			//console.log(text == cuisine_list[i]);
-	    		if(text == cuisine_list[i]) {
-	    			console.log("getting in");
+        		if(text == cuisine_list[i]) {
 	    			cuisine_list[i] = "";
 	    			break;
 	    		}
