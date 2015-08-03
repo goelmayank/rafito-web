@@ -107,15 +107,15 @@
             plugin.els['wrapper']       = $(document.createElement('div')).attr('id','glisse-wrapper');
             plugin.els['overlay']       = $(document.createElement('div')).attr('id','glisse-overlay').css(cssProp, cssVal);
             plugin.els['spinner']       = $(document.createElement('div')).attr('id','glisse-spinner');
-            plugin.els['close']         = $(document.createElement('span')).attr('id','glisse-close').css(cssProp, cssVal);
+            plugin.els['close']         = $(document.createElement('span')).html('<i class="fa fa-times"></i>').attr('id','glisse-close').css(cssProp, cssVal);
             plugin.els['content']       = $(document.createElement('div')).attr('id','glisse-overlay-content').css(cssProp, cssVal)
                                             .css(getPrefix('transform')+'transform', 'scale(0)');
             plugin.els['controls']      = $(document.createElement('div')).attr('id','glisse-controls').css(cssProp, cssVal);
             plugin.els['controlNext']   = $(document.createElement('span')).attr('class','glisse-next')
-                                            .append( $(document.createElement('a')).html('&#62;').attr("href", "#"));
+                                            .append( $(document.createElement('a')).html('<i class="fa fa-chevron-right"></i>').attr("href", "#"));
             plugin.els['controlLegend'] = $(document.createElement('span')).attr('class','glisse-legend');
             plugin.els['controlPrev']   = $(document.createElement('span')).attr('class','glisse-prev')
-                                            .append($(document.createElement('a')).html('&#60;').attr("href", "#"));
+                                            .append($(document.createElement('a')).html('<i class="fa fa-chevron-left"></i>').attr("href", "#"));
 
             // Add structure
             plugin.els['overlay'].append(plugin.els['spinner']);
