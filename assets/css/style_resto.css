@@ -309,12 +309,6 @@ body {
 	padding: 0px !important;
 }
 
-.main-text-wrapper {
-	padding-left: 140px !important;
-	padding-top: 120px !important;
-	height: 400px;
-}
-
 .main-text {
 	color: white;
 	font-size: 50px;
@@ -377,10 +371,21 @@ body {
 	.main-text-wrapper {
 		text-align: center;
 	}
+	.main-text-wrapper {
+		padding: 0px 30px !important;
+		padding-top: 120px !important;
+		height: 400px;
+	}
+
 }
 
 @media (min-width: 1200px) {
-	
+		
+	.main-text-wrapper {
+		padding-left: 140px !important;
+		padding-top: 120px !important;
+		height: 400px;
+	}
 }
 
 
