@@ -300,16 +300,19 @@ body {
 	top: -400px;	
 }
 
+.img-cover>.container {
+	background-color: rgba(0,0,0,0.5);
+}
+
 .text-container {
 	margin-top: 60px;
 	padding: 0px !important;
 }
 
 .main-text-wrapper {
-	padding: 0px 100px !important;
-	padding-top: 140px !important;
+	padding-left: 140px !important;
+	padding-top: 120px !important;
 	height: 400px;
-	background-color: rgba(0,0,0,0.5);
 }
 
 .main-text {
@@ -317,7 +320,6 @@ body {
 	font-size: 50px;
 	font-weight: 400;
 	width: 100%;
-	border-bottom: 1px solid white;
 }
 
 .main-button {
@@ -342,12 +344,45 @@ body {
 .under-main-text, .under-main-text-address {
 	color: white;
 	text-shadow: 1px 1px black;
-	width: 80%;
 }
 
 .under-main-text-address {
 	padding-top: 10px;
 }
+
+.main-image-box-wrapper {
+	padding-top: 70px;
+}
+
+.image-wrapper-container {
+	width: 450px;
+}
+
+.image-wrapper {
+	width: 200px;
+	height: 150px;
+	position: relative;
+	float: left;
+	overflow: hidden;
+	box-shadow: 0px 0px 10px black;
+	overflow: hidden;
+	margin: 5px;
+}
+
+
+@media (max-width: 1200px) {
+	.main-image-box-wrapper {
+		display: none;
+	}
+	.main-text-wrapper {
+		text-align: center;
+	}
+}
+
+@media (min-width: 1200px) {
+	
+}
+
 
 .header2 {
 	position: absolute;
@@ -369,7 +404,7 @@ body {
 	height: 100%;
 	line-height: 60px;
 	font-size: 18px;
-	font-weight: 200;
+	font-weight: 800;
 	width: 120px;
 	cursor: pointer;
 }
@@ -429,6 +464,7 @@ td{
 	margin: 5px;
 	border-radius: 5px;
 	overflow: hidden;
+	cursor: pointer;
 }
 
 .photo-wrapper img {
