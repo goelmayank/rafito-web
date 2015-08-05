@@ -221,12 +221,31 @@ body {
 }
 
 
-@media (max-width: 768px) {
-	.header-search-bar-wrapper {
+@media (max-width: 500px) {
+	.alt-search {
+		display: none !important;
+	}
+	.b1, .b2, .b3 {
 		display: none;
 	}
-	.alt-search {
+	.logo {
+		left: calc(50% - 65px);
+	}
+	.head-text {
+		display: none;
+	}
+	.img-container img {
+		position: absolute;
+		height: 150%;
+	}
+}
+
+@media (max-width: 768px) and (min-width: 500px) {
+	.header-search-bar-wrapper {
 		display: block;
+	}
+	.alt-search {
+		display: none !important;
 	}
 	.b1 {
 		display: none;
@@ -244,6 +263,9 @@ body {
 	.alt-search {
 		display: block;
 	}
+	.search-face {
+		margin-top: 150px;
+	}
 	.img-container img {
 		position: absolute;
 		height: 150%;
@@ -256,6 +278,9 @@ body {
 	}
 	.alt-search {
 		display: block;
+	}
+	.search-face {
+		margin-top: 150px;
 	}
 	.img-container img {
 		bottom: -100px;
@@ -277,8 +302,6 @@ body {
 		width: 100%;
 	}
 }
-
-
 
 .img-head {
 	height: 400px;
@@ -363,8 +386,7 @@ body {
 	margin: 5px;
 }
 
-
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
 	.main-image-box-wrapper {
 		display: none;
 	}
@@ -372,17 +394,28 @@ body {
 		text-align: center;
 	}
 	.main-text-wrapper {
-		padding: 0px 3
+		padding: 0px 30px !important;
+		padding-top: 90px !important;
+		height: 400px;
+	}
+}
 
-		0px !important;
+
+@media (max-width: 1200px) and (min-width: 768px) {
+	.main-image-box-wrapper {
+		display: none;
+	}
+	.main-text-wrapper {
+		text-align: center;
+	}
+	.main-text-wrapper {
+		padding: 0px 30px !important;
 		padding-top: 120px !important;
 		height: 400px;
 	}
-
 }
 
 @media (min-width: 1200px) {
-		
 	.main-text-wrapper {
 		padding-left: 140px !important;
 		padding-top: 120px !important;
@@ -404,6 +437,7 @@ body {
 
 .header2 ul {
 	display: inline;
+	padding: 0px;
 }
 
 .header2 ul li {
@@ -476,6 +510,20 @@ td{
 
 .photo-wrapper img {
 	height: 100%;
+}
+
+@media (max-width: 500px) {
+	.header2 ul li {
+		font-size: 14px;
+		width: auto;
+		padding: 0px 20px;
+	}
+	.main-block {
+		padding: 20px;
+	}
+	td {
+		width: 50%;
+	}
 }
 
 

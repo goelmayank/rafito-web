@@ -225,20 +225,31 @@ body {
 }
 
 
-@media (max-width: 768px) {
-	.header-search-bar-wrapper {
+@media (max-width: 500px) {
+	.alt-search {
+		display: none !important;
+	}
+	.b1, .b2, .b3 {
 		display: none;
 	}
-	.alt-search {
+	.logo {
+		left: calc(50% - 65px);
+	}
+	.head-text {
+		display: none;
+	}
+}
+
+@media (max-width: 768px) and (min-width: 500px) {
+	.header-search-bar-wrapper {
 		display: block;
+	}
+	.alt-search {
+		display: none !important;
 	}
 	.b1 {
 		display: none;
 	}
-	.search-face {
-		margin-top: 150px;
-	}
-
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
@@ -251,7 +262,6 @@ body {
 	.search-face {
 		margin-top: 150px;
 	}
-
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -264,7 +274,6 @@ body {
 	.search-face {
 		margin-top: 150px;
 	}
-
 }
 
 @media (min-width: 1200px) {
@@ -274,10 +283,6 @@ body {
 	.alt-search {
 		display: none !important;
 	}
-	.search-face {
-		margin-top: 100px;
-	}
-
 }
 
 
@@ -453,6 +458,23 @@ body {
 	float: left;
 }
 
+@media (max-width: 500px) {
+	.rest-info {
+		height: auto;
+	}
+	.rest-add {
+		text-align: center;
+		line-height: 20px;
+		padding-bottom: 50px;
+	}
+	.rest-button {
+		float: none;
+	}
+	.rest-buttons-wrapper {
+		text-align: center;
+	}
+}
+
 
 /*---------------------------------------- LOADING MORE -----------------------------------------*/
 
@@ -521,6 +543,30 @@ a {
 }
 
 
+@media (max-width: 500px) {
+	.footer_links {
+		margin-left: 0px;
+		padding-left: 0px;
+	}
+	.footer_links > li {
+		padding: 5px 15px;
+		font-size: 10px;
+	}
+	.social_links {
+		font-size: 30px;
+	}
+	.social_links > li {
+		padding: 10px;
+	}
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+	.footer_links > li {
+		padding: 5px;
+	}
+}
+
+
 /*---------------------------------------- COPYRIGHT ------------------------------------------------*/
 
 .copyright {
@@ -547,6 +593,30 @@ a {
 	left: 20px;
 }
 
+@media (max-width: 768px) and (min-width: 500px) {
+	.state, .contact {
+		position: inherit;
+		float: none;
+		left: 0px;
+		right: 0px;
+		padding: 5px;
+	}
+	.copyright {
+		text-align: center;
+	}
+}
 
+@media (max-width: 500px) {
+	.state, .contact {
+		position: inherit;
+		float: none;
+		left: 0px;
+		right: 0px;
+		padding: 5px;
+	}
+	.copyright {
+		text-align: center;
+	}
+}
 
 
