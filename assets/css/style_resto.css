@@ -171,23 +171,28 @@ body {
 
 /*-------------------------------------- HEADER 2 ----------------------------------------*/
 
-.header2 {
+.header2, .fixed-header2 {
 	position: absolute;
 	width: 100%;
 	height: 60px;
-	margin-top: 400px;
+	margin-top: 0px;
 	text-align: center;
 	background-color: #ddd;
 	border-bottom: 1px solid #aaa;
+}
+
+.fixed-header2 {
+	position: fixed;
+	margin-top: 60px;
 	z-index: 1100;
 }
 
-.header2 ul {
+.header2 ul, .fixed-header2 ul {
 	display: inline;
 	padding: 0px;
 }
 
-.header2 ul li {
+.header2 ul li, .fixed-header2 ul li {
 	display: inline-block;
 	height: 100%;
 	line-height: 60px;
@@ -263,7 +268,7 @@ td{
 }
 
 @media (max-width: 500px) {
-	.header2 ul li {
+	.header2 ul li, .fixed-header2 ul li {
 		font-size: 14px;
 		width: auto;
 		padding: 0px 20px;

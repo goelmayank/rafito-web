@@ -3,8 +3,8 @@ var s;
 
 initializeSkrollr();
 
-$(".header2 ul li").click(function() {
-	$(".header2 ul li").removeClass("active-tab");
+$(".header2 ul li, .fixed-header2 ul li").click(function() {
+	$(".header2 ul li, .fixed-header2 ul li").removeClass("active-tab");
 	$(this).addClass('active-tab');
 	$(".main-block").fadeOut('100');
 	$(".block-"+$(this).attr("tab")).delay(400).fadeIn(100);
@@ -49,7 +49,7 @@ function initialize() {
 	var map = new google.maps.Map(document.getElementById('map-canvas'),
 	    mapOptions);
 }
-google.maps.event.addDomListener(window, 'load', initialize);
+//google.maps.event.addDomListener(window, 'load', initialize);
 
 
 $(function () {

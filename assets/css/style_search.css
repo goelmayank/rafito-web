@@ -165,6 +165,19 @@ body {
 	width: calc(100% - 20px);
 }
 
+@media (max-width: 500px) {
+	.rest-name {
+		font-size: 18px;
+		font-weight: 500;
+		bottom: 40px;
+		text-align: center;
+	}
+	.rest-cuisine {
+		text-align: center;
+		height: 31px;
+	}
+}
+
 .rest-add {
 	padding-top: 10px;
 	color: #555;
