@@ -5,7 +5,9 @@ initializeSkrollr();
 
 $(".header2 ul li, .fixed-header2 ul li").click(function() {
 	$(".header2 ul li, .fixed-header2 ul li").removeClass("active-tab");
-	$(this).addClass('active-tab');
+	var tab = $(this).attr('tab');
+	$("#h2_"+tab).addClass('active-tab');
+	$("#fh2_"+tab).addClass('active-tab');
 	$(".main-block").fadeOut('100');
 	$(".block-"+$(this).attr("tab")).delay(400).fadeIn(100);
 });
