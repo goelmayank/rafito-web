@@ -19,6 +19,7 @@
 		<script type="text/javascript" src="bower_components/skrollr/src/skrollr.js"></script>
 		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 		<script type="text/javascript" src="assets/plugins/jquery.scrollbox.js"></script>
+		<script type="text/javascript" src="assets/plugins/jssor/jssor.slider.js"></script>
 
 		<div class="header" data-200="background:rgba(0,0,0,0);;border-bottom: 1px solid rgba(255,255,255,0.5);box-shadow: 0px 0px 0px 0px rgba(0,0,0,1);height:80px" data-500="background:rgba(50,50,50,1);height: 60px;box-shadow: -1px -3px 10px 4px rgba(0,0,0,0.75);border-bottom: 1px solid rgba(0,0,0,0);">
 			<img src="assets/img/logo.png" class="logo" data-200="top:8px" data-500="top:-2px">
@@ -83,6 +84,46 @@
 				<div class="row">
 					<div class="col-lg-7 col-md-12">
 						<img class="mac-frame" src='assets/img/ipad.png'>
+
+						<div class="img-slider-wrapper">
+						
+							<div id="slider1_container">
+					            <!-- Loading Screen -->
+					            <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+					                <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+
+					                background-color: #000; top: 0px; left: 0px;width: 100%; height:100%;">
+					                </div>
+					                <div class="loading_img">
+					                </div>
+					            </div>
+
+					            <!-- Slides Container -->
+					            <div u="slides" class="slider1_slides" >
+					                
+					                <div>
+					                    <img u="image" src2="assets/img/signup-slider/01.jpg" />
+					                </div>
+					                <div>
+					                    <img u="image" src2="assets/img/signup-slider/02.jpg" />
+					                </div>
+					                <div>
+					                    <img u="image" src2="assets/img/signup-slider/03.jpg" />
+					                </div>
+					                <div>
+					                    <img u="image" src2="assets/img/signup-slider/04.jpg" />
+					                </div>
+					            </div>
+					     		
+
+					            <span u="arrowleft" class="jssora21l" style="top: 123px; left: 8px;">
+					            </span>
+					            
+					            <span u="arrowright" class="jssora21r" style="top: 123px; right: 8px;"></span>
+					        </div>
+
+						</div>
+
 					</div>
 					<div class="col-lg-5 col-md-12 slider-side-frame-wrapper">
 						<div class="slider-side-frame">
@@ -280,31 +321,8 @@
 
 		</div>
 
-		<script type="text/javascript">
-		    
+		<script type="text/javascript" src="assets/js/home.js"></script>
 
-		    $(document).ready(function() {
-			 	//Set the carousel options
-			  	$('#quote-carousel').carousel({
-			    	pause: true,
-			    	interval: 4000,
-			  	});
-			});
-
-			var s = skrollr.init();
-
-			$('#demo5').scrollbox({
-  				direction: 'h',
-  				distance: 210
-			});
-			$('#demo5-backward').click(function () {
-			 	$('#demo5').trigger('backward');
-			});
-			$('#demo5-forward').click(function () {
-			 	$('#demo5').trigger('forward');
-			});
-
-		</script>
 
 	</body>
 </html>

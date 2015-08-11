@@ -243,6 +243,54 @@ body {
 }
 
 
+.img-slider-wrapper {
+	width: 680px;
+	height: 511px;
+	position: absolute;
+	top: 69px;
+	left: -26px;
+}
+
+#slider1_container {
+	display: none; 
+	position: absolute; 
+	margin: 0 auto; 
+	width: 100%; 
+	height: 100%; 
+	overflow: hidden;
+}
+
+.loading_img {
+	position: absolute;
+	display: block; 
+	background: url(../img/loading.gif) no-repeat center center;
+	top: 0px; 
+	left: 0px;
+	width: 100%;
+	height:100%;
+}
+
+/* jssor slider arrow navigator skin 11 css */
+					               
+.jssora21l, .jssora21r {
+    display: block;
+    position: absolute;
+    /* size of arrow element */
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    background: url(../plugins/jssor/img/a21.png) center center no-repeat;
+    overflow: hidden;
+}
+.jssora21l { background-position: -3px -33px; }
+.jssora21r { background-position: -63px -33px; }
+.jssora21l:hover { background-position: -123px -33px; }
+.jssora21r:hover { background-position: -183px -33px; }
+.jssora21l.jssora21ldn { background-position: -243px -33px; }
+.jssora21r.jssora21rdn { background-position: -303px -33px; }
+
+
+
 @media (max-width: 500px) {
 	.slider-desc {
 		height: 120px;
@@ -260,6 +308,9 @@ body {
 	.mac-frame {
 		display: none;
 	}
+	.img-slider-wrapper {
+		display: none;
+	}
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
@@ -270,20 +321,39 @@ body {
 		padding: 0px 200px !important;
 		text-align: justify;
 	}
+	.img-slider-wrapper {
+		display: none;
+	}
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
 	.mac-frame {
 		padding: 00px 0px;
 		margin-bottom: 40px;
-		width: 90%;
-		margin-left: 5%; 
+		width: 900px;
+		margin-left: calc(50% - 450px); 
 	}
 
 	.slider-side-frame-wrapper {
 		padding: 0px 25% !important;
 		text-align: justify;
 	}
+	.img-slider-wrapper {
+		width: 736px;
+		height: 553px;
+		position: absolute;
+		top: calc(10% + 1px);
+		left: calc(50% - 364px);
+	}
+	.slider1_slides {
+		cursor: move; 
+		position: absolute; 
+		left: 0px; 
+		top: 0px; 
+		width: 800px; 
+		height: 553px;
+		overflow: hidden;
+	} 
 }
 
 @media (min-width: 1200px) {
@@ -296,6 +366,22 @@ body {
 		padding-right: 100px !important;
 		text-align: justify;
 	}
+	.img-slider-wrapper {
+		width: 680px;
+		height: 511px;
+		position: absolute;
+		top: 69px;
+		left: -26px;
+	}
+	.slider1_slides {
+		cursor: move; 
+		position: absolute; 
+		left: 0px; 
+		top: 0px; 
+		width: 680px; 
+		height: 511px;
+		overflow: hidden;
+	} 
 }
 
 
