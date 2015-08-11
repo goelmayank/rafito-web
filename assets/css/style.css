@@ -65,7 +65,7 @@ body {
     position: absolute;
     top: -2px;
     left: 60px;
-    width: 130px;
+    width: 160px;
 }
 
 .header-search-bar-wrapper {
@@ -172,7 +172,7 @@ body {
         display: none;
     }
     .logo {
-        left: calc(50% - 65px);
+        left: calc(50% - 80px);
     }
 }
 
